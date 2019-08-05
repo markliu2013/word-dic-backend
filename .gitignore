@@ -1,0 +1,21 @@
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.recommenders/
+.metadata/
+
+# OSX
+.DS_Store
+
+#Gradle
+.gradletasknamecache
+.gradle/
+build/
+bin/
