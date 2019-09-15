@@ -13,7 +13,7 @@ public class Tag {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
-    @Column(length = 16, unique=true)
+    @Column(length = 16, nullable=false, unique=true)
     private String name;
 
     public Integer getId() {

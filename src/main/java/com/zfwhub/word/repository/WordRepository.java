@@ -1,0 +1,11 @@
+package com.zfwhub.word.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.zfwhub.word.po.Word;
+
+public interface WordRepository extends JpaRepository<Word, Integer> {
+    
+    Word findOneByName(String name);
+
+}

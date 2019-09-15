@@ -22,6 +22,19 @@ public class WordCategoryRelation {
     
     @Column(length = 512, nullable = false)
     private String definition;
+    
+    private Integer rank;
+    
+    public WordCategoryRelation() { }
+    
+    public WordCategoryRelation(Word word, Category category, String definition, Integer rank) {
+        this.word = word;
+        this.category = category;
+        this.definition = definition;
+        this.rank = rank;
+    }
+
+
 
     public Integer getId() {
         return id;
@@ -53,6 +66,14 @@ public class WordCategoryRelation {
 
     public void setDefinition(String definition) {
         this.definition = definition;
+    }
+    
+    public Integer getRank() {
+        return rank;
+    }
+    
+    public void setRank(Integer rank) {
+        this.rank = rank;
     }
     
 }

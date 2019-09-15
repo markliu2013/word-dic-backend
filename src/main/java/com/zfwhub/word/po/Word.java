@@ -16,7 +16,7 @@ public class Word {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
-    @Column(length = 32, unique=true)
+    @Column(length = 32, nullable=false, unique=true)
     private String name;
     
     private Integer frequency;
@@ -26,6 +26,12 @@ public class Word {
     
     @ManyToMany
     private List<Tag> tags;
+    
+    public Word() { }
+    
+    public Word(String name) {
+        this.name = name;
+    }
 
     public Integer getId() {
         return id;
