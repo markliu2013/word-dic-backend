@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zfwhub.word.dto.BaseResponse;
-import com.zfwhub.word.dto.WordCategoryRelationAddDto;
-import com.zfwhub.word.service.WordCategoryRelationService;
+import com.zfwhub.word.dto.SentenceAddDto;
+import com.zfwhub.word.service.SentenceService;
 
 @RestController
-public class WordCategoryRelationController {
+public class SentenceController {
     
     @Autowired
-    private WordCategoryRelationService wordCategoryRelationService;
+    private SentenceService sentenceService;
     
-    @RequestMapping(value="/wordCategoryRelations", method=RequestMethod.POST)
-    public BaseResponse add(@RequestBody WordCategoryRelationAddDto wordCategoryRelationAddDto) {
-        wordCategoryRelationService.add(wordCategoryRelationAddDto);
+    @RequestMapping(value="/sentences", method=RequestMethod.POST)
+    public BaseResponse add(@RequestBody SentenceAddDto sentenceAddDto) {
+        sentenceService.add(sentenceAddDto);
         return new BaseResponse(true);
     }
     

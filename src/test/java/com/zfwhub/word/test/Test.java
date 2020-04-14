@@ -65,7 +65,7 @@ public class Test {
     }
     
     public static void main(String[] args) {
-        getWordList();
+        getWordDetail("belt");
 //        String reg="\\d{3,6}";        
 //        String test="61762828 176 2991 871";
 //        System.out.println("文本："+test);

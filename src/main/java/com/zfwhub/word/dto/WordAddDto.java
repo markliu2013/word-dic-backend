@@ -9,6 +9,12 @@ public class WordAddDto implements DtoEntity {
     private String phoneticSymbol;
     private List<TagAddDto> tagAddDtos;
     
+    public WordAddDto() { }
+    
+    public WordAddDto(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -65,5 +71,9 @@ public class WordAddDto implements DtoEntity {
             return false;
         return true;
     }
-    
+
+    @Override
+    public String toString() {
+        return "WordAddDto [name=" + name + ", frequency=" + frequency + ", phoneticSymbol=" + phoneticSymbol + ", tagAddDtos=" + tagAddDtos + "]";
+    }
 }

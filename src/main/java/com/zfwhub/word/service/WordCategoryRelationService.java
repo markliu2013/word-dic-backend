@@ -1,9 +1,10 @@
 package com.zfwhub.word.service;
 
 import com.zfwhub.word.dto.WordCategoryRelationAddDto;
+import com.zfwhub.word.po.WordCategoryRelation;
 
 public interface WordCategoryRelationService {
     
-    boolean add(WordCategoryRelationAddDto wordCategoryRelationAddDto);
+    WordCategoryRelation add(WordCategoryRelationAddDto wordCategoryRelationAddDto);
 
 }

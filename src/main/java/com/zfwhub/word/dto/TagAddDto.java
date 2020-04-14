@@ -11,6 +11,12 @@ public class TagAddDto implements DtoEntity {
     public void setName(String name) {
         this.name = name;
     }
+    
+    public TagAddDto() { }
+
+    public TagAddDto(String name) {
+        this.name = name;
+    }
 
     @Override
     public int hashCode() {
@@ -35,6 +41,11 @@ public class TagAddDto implements DtoEntity {
         } else if (!name.equals(other.name))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "TagAddDto [name=" + name + "]";
     }
     
 }

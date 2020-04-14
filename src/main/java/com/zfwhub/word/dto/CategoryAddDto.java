@@ -4,6 +4,12 @@ public class CategoryAddDto implements DtoEntity {
     
     private String name;
     
+    public CategoryAddDto() { }
+    
+    public CategoryAddDto(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

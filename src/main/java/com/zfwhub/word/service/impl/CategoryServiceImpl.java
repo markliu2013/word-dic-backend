@@ -22,7 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryRepository categoryRepository;
 
     @Override
-    public boolean add(CategoryAddDto categoryAddDto) {
+    public Category add(CategoryAddDto categoryAddDto) {
         if (StringUtils.isEmpty(categoryAddDto.getName())) {
             throw new ValidationViolationException("category name is empty");
         }
@@ -32,7 +32,7 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = new Category();
         BeanUtils.copyProperties(categoryAddDto, category);
         categoryRepository.save(category);
-        return true;
+        return category;
     }
 
 }
