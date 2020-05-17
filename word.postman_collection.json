@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "d2340c67-616a-4342-bb4d-dc4cf26c6f2e",
+		"name": "word",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"a\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add tag",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"t1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add word",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tagAddDtos\": [\n        {\n            \"name\": \"CET4\"\n        },\n        {\n            \"name\": \"TEM4\"\n        }\n    ],\n    \"phoneticSymbol\": \"/bɛlt/\",\n    \"name\": \"belt\",\n    \"frequency\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add wordCategoryRelation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"wordId\": 4,\n\t\"categoryId\": 1,\n\t\"definition\": \"aaab\",\n\t\"rank\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/wordCategoryRelations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wordCategoryRelations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add sentence",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"content\",\n\t\"wordCategoryRelationId\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/sentences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sentences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add phrase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"content\",\n\t\"wordCategoryRelationId\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/phrases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phrases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add word Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"a1\",\n\t\"tagAddDtos\": [\n\t\t{\n\t\t\"name\": \"t\"\n\t\t},\n\t\t{\n\t\t\"name\": \"t1\"\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
